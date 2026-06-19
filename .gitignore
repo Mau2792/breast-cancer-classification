@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# Local environments
+.ipynb_checkpoints/
+.venv/
+env/
+
+# Data files (To not push raw data to GitHub)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db

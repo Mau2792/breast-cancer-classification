@@ -1,0 +1,11 @@
+# Data paths configuration
+raw_data_path: "data/raw/breast_cancer.csv"
+processed_data_path: "data/processed/scaled_data.csv"
+
+# Train/Test split parameters
+test_size: 0.2
+random_state: 42
+
+# Model hyperparameters (Random Forest Classifier)
+n_estimators: 100
+depth: 5
