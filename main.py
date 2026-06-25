@@ -2,6 +2,7 @@ from src.config_loader import load_config
 from src.data_preprocessing import fetch_and_save_raw_data, split_data
 from src.model_training import train_model
 from src.evaluation import evaluate_model
+from src.model_io import save_model
 
 def main():
     print("Starting Breast Cancer Pipeline")
@@ -31,6 +32,7 @@ def main():
         random_state=config['random_state']
     )
      
+    
     # Testing the model and evaluating accuracy
     report = evaluate_model(
         X_test=X_test,
@@ -38,6 +40,9 @@ def main():
         y_test=y_test
     )
 
+    # Saving the trained model to the path specified in the configuration file
+    save_model(model, config['save_model_path'])
+    
 
     
 
